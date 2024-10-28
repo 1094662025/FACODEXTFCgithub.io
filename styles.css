@@ -1,39 +1,74 @@
-/* styles.css */
+/* RESET BÁSICO 
+   Se eliminan los márgenes y rellenos predeterminados de los elementos comunes para asegurar consistencia. */
+   body, h1, h2, h3, p, ul, table, th, td {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ESTILOS GENERALES DEL BODY 
+   Se establecen las fuentes y el fondo para las partes exteriores. */
 body { 
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #000000; /* Fondo laterales */
+    line-height: 1.6;
 }
 
+/* CONTENEDOR PRINCIPAL 
+   Centra el contenido principal y añade bordes y sombras suaves. */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 90%; /* Ancho flexible para adaptarse a pantallas pequeñas */
+    max-width: 1200px; /* Ancho máximo para pantallas grandes */
+    margin: 0 auto; /* Centrar la página */
     padding: 20px;
-    background-color: #fff;
+    background-color: #ffffff; /* Fondo dentro de la página */
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(38, 190, 51, 0.1);
+    border: 2px solid rgb(155, 161, 173); /* Borde temporal para depuración */
+    display: flex; /* Usar Flexbox para organizar contenido */
+    flex-direction: column; /* Los elementos se apilan verticalmente */
 }
 
+/* ESTILOS DEL HEADER 
+   Define el estilo del encabezado, con fondo azul y texto blanco. */
 header {
     background: #007BFF;
-    color: white;
+    color: rgb(255, 249, 249); /* Título Principal */
     padding: 20px;
-    text-align: center;
+    text-align: center; 
 }
 
+/* PÁRRAFOS 
+   Color negro para los textos dentro de los párrafos. */
+p {
+    color: #000000;
+}
+
+/* TÍTULO EN EL HEADER 
+   El título h1 se ajusta a una fuente grande sin margen. */
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* MENÚ DE NAVEGACIÓN 
+   Configuración del menú de navegación con links en línea. */
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block; /* Cambia a inline-block para mayor control */
     margin: 0 15px;
 }
 
+/* ESTILOS DE LOS LINKS DEL MENÚ */
 .menu-link {
-    color: white;
+    color: rgb(255, 255, 255); /* Color del menú */
     text-decoration: none;
     font-weight: bold;
 }
@@ -42,76 +77,37 @@ nav ul li {
     text-decoration: underline;
 }
 
+/* TÍTULOS H2 Y H3 
+   Estilo para los títulos secundarios con márgenes y tamaños ajustados. */
 h2, h3 {
-    color: #333;
-}
-
-h2 {
+    color: #000000;
     margin-top: 20px;
 }
 
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* SECCIONES 
+   Define márgenes para las secciones del contenido. */
 section {
     margin-top: 20px;
 }
 
+/* LISTAS 
+   Añade margen a la izquierda para las listas no ordenadas. */
 ul {
     margin-left: 20px;
 }
 
-footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em;
-    color: #666;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-header {
-    background: #007BFF;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-.menu-link {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.menu-link:hover {
-    text-decoration: underline;
-}
-
-h2, h3 {
-    color: #333;
-}
-
+/* FORMULARIOS 
+   Estilos generales para formularios, con campos y botones. */
 form {
     margin: 20px 0;
 }
@@ -132,9 +128,10 @@ input, textarea {
     border-radius: 4px;
 }
 
+/* BOTONES */
 button {
     padding: 10px 15px;
-    background: #007BFF;
+    background: #ffa600;
     color: white;
     border: none;
     border-radius: 4px;
@@ -142,240 +139,82 @@ button {
 }
 
 button:hover {
-    background: #0056b3;
+    background: #3600b3;
 }
 
-footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em;
-    color: #666;
-}
-
-/* styles.css */
-body { 
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-header {
-    background: #007BFF;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-.menu-link {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.menu-link:hover {
-    text-decoration: underline;
-}
-
-h2 {
-    color: #333;
-}
-
+/* TABLAS 
+   Ajusta el tamaño de la tabla y añade estilo a las celdas. */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    border: 2px solid black; /* Borde negro alrededor de la tabla */
 }
 
-th, td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
-}
-
+/* ESTILOS PARA LAS CABECERAS DE LAS TABLAS */
 th {
+    border: 1px solid #000000;
+    padding: 10px;
+    text-align: center;
     background-color: #007BFF;
-    color: white;
+    color: #000000; /* Cambia el color del menú de la tabla */
 }
 
+/* ESTILOS PARA LAS CELDAS */
+td {
+    border: 1px solid #000000; /* Borde para celdas */
+    padding: 10px;
+    color: rgb(0, 0, 0); /* Color del texto */
+}
+
+/* COLOR PARA FILAS PARES */
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #007BFF;
 }
 
+/* PIE DE PÁGINA 
+   Estilo para el pie de página, centrado y con texto rojo oscuro. */
 footer {
     text-align: center;
     margin-top: 20px;
     font-size: 0.9em;
-    color: #666;
-}
-
-/* styles.css */
-body { 
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-header {
-    background: #007BFF;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-.menu-link {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.menu-link:hover {
-    text-decoration: underline;
-}
-
-h2, h3 {
-    color: #333;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th, td {
-    border: 1px solid #ccc;
+    color: #8a0909; /* Letra pie de página */
     padding: 10px;
-    text-align: left;
+    background-color: #ffffff;
 }
 
-th {
-    background-color: #007BFF;
-    color: white;
+/* MEDIA QUERIES PARA HACER RESPONSIVE */
+
+/* Pantallas menores a 768px (tablets y móviles) */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Ocupa casi todo el ancho en pantallas pequeñas */
+        padding: 10px;
+    }
+
+    nav ul li {
+        display: block; /* El menú de navegación será vertical en móviles */
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 1.5em; /* Reduce el tamaño del título en pantallas pequeñas */
+    }
+
+    h2 {
+        font-size: 1.6em; /* Ajustar tamaño de títulos */
+    }
+
+    h3 {
+        font-size: 1.3em; /* Ajustar tamaño de subtítulos */
+    }
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em;
-    color: #666;
-}
-
-/* styles.css */
-body { 
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-header {
-    background: #007BFF;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-.menu-link {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.menu-link:hover {
-    text-decoration: underline;
-}
-
-h2, h3 {
-    color: #333;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th, td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
-}
-
-th {
-    background-color: #007BFF;
-    color: white;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em;
-    color: #666;
+/* Pantallas mayores a 1024px (escritorios grandes) */
+@media (min-width: 1024px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas grandes */
+        grid-gap: 20px;
+    }
 }
