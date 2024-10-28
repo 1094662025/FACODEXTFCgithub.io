@@ -1,108 +1,249 @@
+/* 
+    Configuración básica de todos los elementos para que el tamaño de bordes y márgenes
+    sea consistente. El scroll-behavior: smooth permite un desplazamiento suave al navegar.
+*/
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* 
+    Estilos básicos del cuerpo (body) de la página.
+    Establece una fuente global y un color de fondo claro (#f4f4f9).
+*/
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f9;
 }
 
+/* 
+    Configuración del encabezado (header).
+    Color de fondo (#345ac4), texto blanco y una sombra para dar profundidad visual.
+*/
 header {
-    background-color: #333;
+    background-color: #345ac4;
     color: white;
     padding: 10px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* 
+    Estilos para el menú de navegación (nav) con una lista no ordenada (ul).
+    Se elimina el estilo de lista y se centra el menú horizontalmente.
+    flex-wrap: wrap permite que el menú se ajuste en pantallas pequeñas.
+*/
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en dispositivos más pequeños */
+    flex-wrap: wrap;
 }
 
+/* 
+    Estilo de cada elemento del menú (li).
+    Margen entre los elementos para separarlos visualmente.
+*/
 nav ul li {
     margin: 0 15px;
 }
 
+/* 
+    Estilos de los enlaces (a) del menú.
+    Cambios de color, sin subrayado, negrita, y transiciones suaves en hover.
+*/
 nav ul li a {
     color: white;
     text-decoration: none;
     padding: 5px 10px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
+/* 
+    Efecto hover en los enlaces del menú.
+    Cambia el color a negro (#000000) y aumenta el tamaño ligeramente.
+*/
+nav ul li a:hover {
+    color: #000000;
+    transform: scale(1.1);
+}
+
+/* 
+    Estilos de las secciones principales (section).
+    Define márgenes, color de fondo blanco, esquinas redondeadas, y sombra para dar un efecto de tarjeta.
+*/
 section {
     padding: 20px;
-    margin: 10px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
+/* 
+    Estilo de los títulos (h2) en las secciones.
+    Ajuste de tamaño de fuente, color principal, y centrado.
+*/
+section h2 {
+    font-size: 1.8em;
+    color: #345ac4;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 
+    Estilos generales para los párrafos (p).
+    Ajuste de tamaño de fuente, altura de línea, y márgenes para mejorar la legibilidad.
+*/
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* 
+    Estilos para las tablas (table).
+    Define ancho completo, colapsa bordes, y añade un margen superior.
+*/
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px;
 }
 
+/* 
+    Estilo de las celdas de las tablas (th y td).
+    Bordes y espaciado para una presentación clara y ordenada.
+*/
 table, th, td {
     border: 1px solid #ddd;
+    padding: 12px;
 }
 
-th, td {
-    padding: 8px;
-    text-align: left;
-}
-
+/* 
+    Estilos de las celdas de encabezado de la tabla (th).
+    Color de fondo azul (#345ac4) y texto blanco.
+*/
 th {
-    background-color: #f2f2f2;
+    background-color: #345ac4;
+    color: white;
 }
 
+/* 
+    Estilo de las celdas de datos de la tabla (td).
+    Fondo claro para mejorar la legibilidad y el contraste.
+*/
+td {
+    background-color: #f9f9f9;
+}
+
+/* 
+    Estilo del pie de página (footer).
+    Centrado, con un fondo oscuro y color de texto blanco, con una sombra para resaltar.
+*/
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #333;
+    padding: 15px;
+    background-color: #000000;
     color: white;
     position: relative;
     bottom: 0;
     width: 100%;
+    font-size: 0.9em;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilos responsivos */
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column; /* Cambia la dirección de los elementos en pantallas pequeñas */
-    }
-    
-    nav ul li {
-        margin: 5px 0; /* Espaciado más pequeño en dispositivos móviles */
-    }
-}
- /* FORMULARIOS 
-   Estilos generales para formularios, con campos y botones. */
+/* 
+    Estilos básicos para formularios (form).
+    Espaciado adicional entre el formulario y otros elementos.
+*/
 form {
     margin: 20px 0;
 }
 
+/* 
+    Estilos de grupos de formulario (form-group).
+    Añade margen inferior entre campos para una disposición uniforme.
+*/
 .form-group {
     margin-bottom: 15px;
 }
 
+/* 
+    Estilos para etiquetas (label).
+    Fuente en negrita y color de fuente azul (#345ac4).
+*/
 label {
     display: block;
     margin-bottom: 5px;
+    font-weight: bold;
+    color: #345ac4;
 }
 
+/* 
+    Estilos para los campos de entrada (input y textarea).
+    Borde y padding ajustados, además de transición de color en foco.
+*/
 input, textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 4px;
+    transition: border-color 0.3s ease;
 }
 
-/* BOTONES */
+/* 
+    Efecto de enfoque (focus) en los campos de entrada.
+    Cambia el color del borde para indicar el campo activo.
+*/
+input:focus, textarea:focus {
+    border-color: #345ac4;
+    outline: none;
+}
+
+/* 
+    Estilos para los botones (button).
+    Fondo de color azul oscuro, borde redondeado, y efecto hover con transición.
+*/
 button {
     padding: 10px 15px;
-    background: #ffa600;
+    background: #265774;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
+/* 
+    Efecto hover en botones.
+    Cambia el color de fondo y aumenta ligeramente el tamaño.
+*/
 button:hover {
-    background: #3600b3;
+    background: #345ac4;
+    transform: scale(1.05);
 }
+
+/* 
+    Estilos Responsivos:
+    Ajusta la disposición del menú y el padding de las secciones para pantallas pequeñas.
+*/
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+    }
+    
+    section {
+        padding: 15px;
+    }
+}
+
