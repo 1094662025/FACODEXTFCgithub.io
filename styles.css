@@ -1,224 +1,73 @@
-/* RESET BÁSICO */
-body, h1, h2, h3, p, ul, table, th, td {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* ESTILOS GENERALES DEL BODY */
-body { 
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000000; /* Fondo laterales */
-    line-height: 1.6;
 }
 
-/* CONTENEDOR PRINCIPAL */
-.container {
-    width: 90%; /* Ancho flexible para adaptarse a pantallas pequeñas */
-    max-width: 1200px; /* Ancho máximo para pantallas grandes */
-    margin: 0 auto; /* Centrar la página */
-    padding: 20px;
-    background-color: #ffffff; /* Fondo dentro de la página */
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(38, 190, 51, 0.1);
-    border: 2px solid rgb(155, 161, 173);
-    display: flex;
-    flex-direction: column;
-}
-
-/* ESTILOS DEL HEADER */
 header {
-    background: #007BFF;
-    color: rgb(255, 249, 249);
-    padding: 20px;
-    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2em;
-}
-
-/* MENÚ DE NAVEGACIÓN */
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en dispositivos más pequeños */
 }
 
 nav ul li {
-    display: inline-block;
     margin: 0 15px;
 }
 
-/* ESTILOS DE LOS LINKS DEL MENÚ */
-.menu-link {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.menu-link:hover {
-    text-decoration: underline;
-}
-
-/* TÍTULOS H2 Y H3 */
-h2, h3 {
-    color: #000000;
-    margin-top: 20px;
-}
-
-h2 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-}
-
-h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-/* SECCIONES */
-section {
-    margin-top: 20px;
-}
-
-/* LISTAS */
-ul {
-    margin-left: 20px;
-}
-
-/* FORMULARIOS */
-form {
-    margin: 20px 0;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-/* BOTONES */
-button {
-    padding: 10px 15px;
-    background: #ffa600;
+nav ul li a {
     color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    text-decoration: none;
+    padding: 5px 10px;
 }
 
-button:hover {
-    background: #3600b3;
+section {
+    padding: 20px;
+    margin: 10px;
 }
 
-/* TABLAS */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-    border: 2px solid black;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
 }
 
 th {
-    border: 1px solid #000000;
-    padding: 10px;
-    text-align: center;
-    background-color: #007BFF;
-    color: #000000;
+    background-color: #f2f2f2;
 }
 
-td {
-    border: 1px solid #000000;
-    padding: 10px;
-    color: rgb(0, 0, 0);
-}
-
-tr:nth-child(even) {
-    background-color: #007BFF;
-}
-
-/* PIE DE PÁGINA */
 footer {
     text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em;
-    color: #8a0909;
     padding: 10px;
-    background-color: #ffffff;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-/* MEDIA QUERIES PARA HACER RESPONSIVE */
-
-/* Pantallas menores a 768px (tablets y móviles) */
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-        padding: 10px;
-    }
-
-    /* Estilos para el menú de navegación en móviles */
+/* Estilos responsivos */
+@media (max-width: 600px) {
     nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Cambia la dirección de los elementos en pantallas pequeñas */
     }
-
+    
     nav ul li {
-        display: block;
-        margin: 10px 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    h2 {
-        font-size: 1.6em;
-    }
-
-    h3 {
-        font-size: 1.3em;
-    }
-
-    /* Ajustes de texto y espaciado en pantallas pequeñas */
-    p, ul {
-        font-size: 0.9em;
-        line-height: 1.4;
+        margin: 5px 0; /* Espaciado más pequeño en dispositivos móviles */
     }
 }
-
-/* Pantallas mayores a 1024px (escritorios grandes) */
-@media (min-width: 1024px) {
-    main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 20px;
-    }
-
-    main section {
-        grid-column: span 2;
-    }
-}
-
-/* Imágenes y videos adaptativos */
-img, video {
-    max-width: 100%;
-    height: auto;
-}
-
