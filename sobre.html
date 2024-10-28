@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> FACODEXT ATALANTA FC - Sobre Nosotros</title>
+    <title>Facobext Atalanta FC - Sobre Nosotros</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -69,8 +69,16 @@
     </section>
 
     <footer>
-        <p>&copy; FACODEXT ATALANTA FC - 3202311341 </p>
+        <p>&copy; 2024 Facobext Atalanta FC. Todos los derechos reservados.</p>
     </footer>
+    <script>
+        // Cargar el menú en el elemento "header"
+        fetch('menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
 
     <script src="script.js"></script>
 </body>

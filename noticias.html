@@ -39,9 +39,9 @@
         <!-- Imágenes del Club -->
         <h3>Galería del Club</h3>
         <div class="galeria">
-            <img src="niños.jpg" alt="Campo de entrenamiento del club" width="300">
-            <img src="428632543_1502882303624685_1650640240215856857_n.jpg" alt="Equipo celebrando la victoria" width="300">
-            <img src="cancha.jpg" alt="Entrenamiento grupal" width="300">
+            <img src="imagenes/campo_entrenamiento.jpg" alt="Campo de entrenamiento del club" width="300">
+            <img src="imagenes/equipo_victoria.jpg" alt="Equipo celebrando la victoria" width="300">
+            <img src="imagenes/entrenamiento_grupal.jpg" alt="Entrenamiento grupal" width="300">
         </div>
 
         <!-- Noticias de Inscripciones -->
@@ -52,6 +52,14 @@
     <footer>
         <p>&copy; 2024 Facobext Atalanta FC. Todos los derechos reservados.</p>
     </footer>
+    <script>
+        // Cargar el menú en el elemento "header"
+        fetch('menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
 
     <script src="script.js"></script>
 </body>

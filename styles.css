@@ -247,4 +247,71 @@ button:hover {
     }
 }
 
+/* Estilos generales */
+.menu-icon {
+    display: none; /* Oculto en pantallas grandes */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
 
+/* Menú desplegable en pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Visible solo en pantallas pequeñas */
+    }
+
+    #menu {
+        display: none; /* Oculto por defecto */
+        flex-direction: column;
+        align-items: center;
+        background-color: #345ac4;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+
+    #menu.show {
+        display: flex; /* Muestra el menú cuando se activa */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Estilos generales para el menú */
+.menu-icon {
+    display: none; /* Solo se muestra en pantallas pequeñas */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #345ac4;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+
+    #menu.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}

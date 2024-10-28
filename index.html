@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> FACODEXT ATALANTA FC - Inicio</title>
+    <title>Facobext Atalanta FC - Inicio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,7 +21,7 @@
     </header>
 
     <section id="inicio">
-        <h1>Bienvenidos </h1>
+        <h1>Bienvenidos a Facobext Atalanta FC</h1>
         <p>En FACODEXT ATLANTA FC, nos dedicamos a fomentar el amor por el fútbol y a desarrollar habilidades en nuestros estudiantes. 
             Nuestro objetivo es propiciar el desarrollo integral del niño y el joven a través de la orientación aprendizaje
             y práctica del deporte mediante un trabajo disciplinario en fomento educativo, el progreso técnico, 
@@ -47,8 +47,16 @@
     </section>
 
     <footer>
-        <p>&copy; FACODEXT ATALANTA FC - 3202311341 </p>
+        <p>&copy; 2024 Facobext Atalanta FC. Todos los derechos reservados.</p>
     </footer>
+    <script>
+        // Cargar el menú en el elemento "header"
+        fetch('menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
 
     <script src="script.js"></script>
 </body>
