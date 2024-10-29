@@ -245,32 +245,4 @@ button:hover {
     section {
         padding: 15px;
     }
-
-    /* Estilos generales para el menú */
-    .menu-icon {
-        display: block; /* Solo se muestra en pantallas pequeñas */
-        font-size: 30px;
-        color: white;
-        cursor: pointer;
-        padding: 10px;
-    }
-
-    #menu {
-        display: none; /* Oculto por defecto */
-        flex-direction: column;
-        align-items: center;
-        background-color: #345ac4;
-        width: 100%;
-        position: absolute;
-        top: 50px;
-        left: 0;
-    }
-
-    #menu.show {
-        display: flex; /* Muestra el menú cuando se activa */
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
 }
